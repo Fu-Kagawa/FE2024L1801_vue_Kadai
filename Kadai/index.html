@@ -35,19 +35,19 @@
         <div v-if="fortune && isValidName" class="fortune-bg">
           <p>{{ name }}さんの運勢は…</p>
           <div v-if="fortune === 'daikichi'">
-            <img src="./img/daikichi.png" alt="大吉">
+            <img src="./img/daikichi.png" style="width: 100px; height: 200px;" alt="大吉">
           </div>
           <div v-else-if="fortune === 'kichi'">
-            <img src="./img/kichi.png" alt="吉">
+            <img src="./img/kichi.png" style="width: 100px; height: 200px;" alt="吉">
           </div>
           <div v-else-if="fortune === 'chukichi'">
-            <img src="./img/chukichi.png" alt="中吉">
+            <img src="./img/chukichi.png" style="width: 100px; height: 200px;" alt="中吉">
           </div>
           <div v-else-if="fortune === 'shokichi'">
-            <img src="./img/shokichi.png" alt="小吉">
+            <img src="./img/shokichi.png" style="width: 100px; height: 200px;" alt="小吉">
           </div>
           <div v-else>
-            <img src="./img/kyo.png" alt="凶">
+            <img src="./img/kyo.png" style="width: 100px; height: 200px;" alt="凶">
           </div>
         </div>
     </div>
