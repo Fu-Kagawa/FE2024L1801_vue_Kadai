@@ -9,21 +9,21 @@ on:
       - '.vscode/**'
       - 'README.md'
 
-jobs:
-  build-deploy:
-    name: build-deploy
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@4.3.3
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /FE2024L0301codespace/
-          local-dir: ./
+# jobs:
+#   build-deploy:
+#     name: build-deploy
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v3
+#       - name: FTP Deploy
+#         uses: SamKirkland/FTP-Deploy-Action@4.3.3
+#         with:
+#           server: ${{ secrets.FTP_SERVER }}
+#           username: ${{ secrets.FTP_USERNAME }}
+#           password: ${{ secrets.FTP_PASSWORD }}
+#           server-dir: /FE2024L0301codespace/
+#           local-dir: ./
 
   # build-cypress:
   #   runs-on: ubuntu-latest
