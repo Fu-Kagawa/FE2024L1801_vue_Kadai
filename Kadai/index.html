@@ -16,13 +16,10 @@
       </style></head>
 <body> 
     <div id="app">
-        <!-- 名前入力 -->
         <label for="name">名前を入力してください：</label>
-        <input v-model="name" type="text" @input="validateName" >
-        <!-- input v-model="name" type="text" @input="validateName" id="name" -->
+        <!-- 名前入力 -->
         
         <!-- おみくじを引くボタン、名前入力が5文字以下の場合は押せないようにする -->
-        <button @click="drawFortune" :disabled="!isValidName">おみくじを引く</button>
     
         <!-- エラーメッセージ -->
         <p v-if="!isValidName" style="color: red;">{{ errorMessage }}</p>
@@ -30,29 +27,19 @@
     
         <!-- 名前の表示と運勢の画像 -->
         <!-- 5文字以上の名前入力かつ、運勢確定した場合 -->
-        <div v-if="fortune && isValidName" class="fortune-bg">
-          <!-- 名前の表示 -->
+
+        <!-- 名前の表示 -->
           <p>{{ name }}さんの運勢は…</p>
           <!-- 運勢が大吉だった場合、大吉画像表示 -->
-          <div v-if="fortune === 'daikichi'">
-            <img src="./img/daikichi.png" style="width: 100px; height: 200px;" alt="大吉">
-          </div>
+
           <!-- 運勢が吉だった場合、吉画像表示 -->
-          <div v-else-if="fortune === 'kichi'">
-            <img src="./img/kichi.png" style="width: 100px; height: 200px;" alt="吉">
-          </div>
+
           <!-- 運勢が中吉だった場合、中吉画像表示 -->
-          <div v-else-if="fortune === 'chukichi'">
-            <img src="./img/chukichi.png" style="width: 100px; height: 200px;" alt="中吉">
-          </div>
+
           <!-- 運勢が小吉だった場合、小吉画像表示 -->
-          <div v-else-if="fortune === 'shokichi'">
-            <img src="./img/shokichi.png" style="width: 100px; height: 200px;" alt="小吉">
-          </div>
+
           <!-- 運勢が凶だった場合、凶画像表示 -->
-          <div v-else>
-            <img src="./img/kyo.png" style="width: 100px; height: 200px;" alt="凶">
-          </div>
+
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
